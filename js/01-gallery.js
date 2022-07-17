@@ -20,7 +20,7 @@ const markup = galleryItems
 
 gallery.insertAdjacentHTML("beforeend", markup);
 
-gallery.addEventListener('click', showImage)
+gallery.addEventListener('click', showImage);
 
 function showImage(event) {
     event.preventDefault();
@@ -31,3 +31,25 @@ function showImage(event) {
             return;
     }
 }
+
+
+
+
+
+// function showImage(event) {
+
+//     event.preventDefault();
+
+//     const instance = basicLightbox.create(`<img src=${event.target.dataset.source}>`);
+
+//     if (event.key === "Escape") {
+//         instance.close();
+//         console.log (event.key)
+//     }
+//     if (event.target.classList.contains("gallery__image")) {
+//         instance.show();
+//         console.log (event)
+//     }
+
+//     return;
+// }
